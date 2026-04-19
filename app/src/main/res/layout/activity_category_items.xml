@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -27,19 +28,66 @@
             android:textSize="22sp"
             android:textStyle="bold"/>
 
+=======
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F4FF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#1565C0"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:tint="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Category"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItems"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+<<<<<<< HEAD
         android:layout_weight="1"/>
+=======
+        android:layout_weight="1"
+        android:padding="12dp"/>
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAddItem"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:text="+ Add Item"
         android:layout_marginTop="16dp"/>
+=======
+        android:layout_height="52dp"
+        android:text="+ Add Item"
+        android:layout_margin="16dp"
+        android:backgroundTint="#1565C0"
+        app:cornerRadius="12dp"/>
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
 
 </LinearLayout>

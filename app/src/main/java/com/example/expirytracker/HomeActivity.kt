@@ -1,10 +1,14 @@
 package com.example.expirytracker
 
 import android.content.Intent
+<<<<<<< HEAD
 import android.os.Build
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
+=======
+import android.os.Bundle
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +20,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+<<<<<<< HEAD
         // Android 13+ notification permission
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS)
@@ -32,14 +37,23 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
 
+=======
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
         val rv = findViewById<RecyclerView>(R.id.rvCategories)
         rv.layoutManager = GridLayoutManager(this, 2)
 
         val list = mutableListOf(
+<<<<<<< HEAD
             Category("Food",      "🍎", 5, "#FF7043"),
             Category("Medicine",  "💊", 5, "#42A5F5"),
             Category("Cosmetics", "💄", 5, "#AB47BC"),
             Category("Drinks",    "🥤", 5, "#26C6DA")
+=======
+            Category("Food",      "🍎", 3, "#FF7043"),
+            Category("Medicine",  "💊", 2, "#42A5F5"),
+            Category("Cosmetics", "💄", 1, "#AB47BC"),
+            Category("Drinks",    "🥤", 4, "#26C6DA")
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
         )
 
         rv.adapter = CategoryAdapter(this, list) { cat ->
@@ -52,6 +66,7 @@ class HomeActivity : AppCompatActivity() {
         findViewById<MaterialButton>(R.id.btnAddCategory).setOnClickListener {
             startActivity(Intent(this, AddCategoryActivity::class.java))
         }
+<<<<<<< HEAD
 
         // Auto check expiry when app opens
         checkExpiryAndNotify()
@@ -85,3 +100,7 @@ class HomeActivity : AppCompatActivity() {
     }
 }
 
+=======
+    }
+}
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3

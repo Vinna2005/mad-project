@@ -19,6 +19,7 @@ class CategoryItemsActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.tvTitle).text = catName
         findViewById<ImageView>(R.id.btnBack).setOnClickListener { finish() }
 
+<<<<<<< HEAD
         val items = when (catName) {
             "Food" -> listOf(
                 ExpiryItem("Milk",         "2 days left",  false, catName, "Apr 14, 2026"),
@@ -50,23 +51,48 @@ class CategoryItemsActivity : AppCompatActivity() {
             )
             else -> emptyList()
         }
+=======
+        val items = listOf(
+            ExpiryItem("Milk",   "2 days left", false, catName, "May 27, 2025"),
+            ExpiryItem("Bread",  "5 days left", false, catName, "May 30, 2025"),
+            ExpiryItem("Yogurt", "Expired",     true,  catName, "Apr 01, 2025")
+        )
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
 
         val rv = findViewById<RecyclerView>(R.id.rvItems)
         rv.layoutManager = LinearLayoutManager(this)
         rv.adapter = ItemAdapter(this, items) { item ->
             startActivity(
                 Intent(this, ItemDetailActivity::class.java)
+<<<<<<< HEAD
                     .putExtra("ITEM_NAME",   item.name)
                     .putExtra("ITEM_STATUS", item.status)
                     .putExtra("ITEM_DATE",   item.expiryDate)
                     .putExtra("CATEGORY",    item.category)
                     .putExtra("IS_EXPIRED",  item.isExpired)
+=======
+                    .putExtra("ITEM_NAME",  item.name)
+                    .putExtra("ITEM_STATUS", item.status)
+                    .putExtra("ITEM_DATE",  item.expiryDate)
+                    .putExtra("CATEGORY",   item.category)
+                    .putExtra("IS_EXPIRED", item.isExpired)
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
             )
         }
 
         findViewById<MaterialButton>(R.id.btnAddItem).setOnClickListener {
+<<<<<<< HEAD
             startActivity(Intent(this, AddCategoryActivity::class.java))
         }
     }
 }
 
+=======
+            startActivity(
+                Intent(this, AddItemActivity::class.java)
+                    .putExtra("category", catName)
+            )
+        }
+    }
+}
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
