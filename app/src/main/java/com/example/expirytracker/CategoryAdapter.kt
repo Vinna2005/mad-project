@@ -37,3 +37,7 @@ class CategoryAdapter(
 
     override fun getItemCount() = list.size
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3

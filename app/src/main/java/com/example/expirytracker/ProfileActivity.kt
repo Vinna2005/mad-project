@@ -1,5 +1,8 @@
 package com.example.expirytracker
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
@@ -30,3 +33,7 @@ class ProfileActivity : AppCompatActivity() {
             }
     }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5d55251bf52f28edc59179d41fb3c428be9c85a3
